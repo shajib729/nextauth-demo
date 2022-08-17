@@ -8,7 +8,6 @@ import styles from "./header.module.css"
 export default function Header() {
   const { data: session, status } = useSession()
   const loading = status === "loading"
-  console.log(session);
   
   return (
     <header>
@@ -73,33 +72,8 @@ export default function Header() {
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/client">
-              <a>Client</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/server">
-              <a>Server</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
             <Link href="/protected">
               <a>Protected</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/api-example">
-              <a>API</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/admin">
-              <a>Admin</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/me">
-              <a>Me</a>
             </Link>
           </li>
         </ul>
